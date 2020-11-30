@@ -1,0 +1,24 @@
+apply plugin: 'java-library'
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation gradleApi()
+//    implementation "com.android.tools.build:gradle:4.0.1"
+}
+
+//group和version在后面使用自定义插件的时候会用到
+group='com.huahua.publish'
+version='1.0.0'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('/Users/leeco/work'))
+        }
+    }
+}
+
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"

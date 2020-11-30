@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+repositories {
+    maven { url 'https://maven.aliyun.com/repository/public/' }
+    google()
+    jcenter()
+}
+
+dependencies {
+    implementation gradleApi()
+    implementation "com.android.tools.build:gradle:4.0.1"
+}
+//
+sourceCompatibility = "1.7"
+targetCompatibility = "1.7"
